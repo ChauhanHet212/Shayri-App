@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_200sdp"
+    android:background="#313247">
+
+    <ImageView
+        android:id="@+id/closebtn2"
+        android:src="@drawable/close"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_4sdp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:scrollbars="none"
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_toStartOf="@+id/closebtn2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_6sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/emoji_txtv0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="🌷️🍀️🌺️🥀️🌻️🌴️🌹️🌹️"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/emoji_txtv1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="😊️😍️😘️❤️👫️🏻️️😊️😎️"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/emoji_txtv2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="😀️😂️😜️😝️🥀️🌹️☘️🌷️🌺️️️️😃️"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/emoji_txtv3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="🥀️🌹️🌷️🌞️☘️🌄️🌲️🌴️🌼️"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/emoji_txtv4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="🏜️🌷️☘️👍️👍️👉️🚴️‍⛷️🌹️🌺️"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/emoji_txtv5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="🎍️🎋️🍃️🍂️🍁️🍄️🌾️💐️🌷️🌹️🥀️"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/emoji_txtv6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="🌷️☘️🌮️🌺️🌹️✌️☄️🏜️🌼️"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/emoji_txtv7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="🌹️🌹️💚️😍️❤️️💖️😍️🌺️🌹️🌷️"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/emoji_txtv8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="🌹️🌹️😥️😰️😕️😐️😳️😞️🌹️🌷️"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/emoji_txtv9"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="🌺️🥀️🌮️🧀️🍹️😀️🌷️☘️🌞️🌺️🥀️"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:id="@+id/noemoji_txtv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="without Emojis"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:background="@color/white"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_120sdp"
+    android:background="@color/Gray">
+
+    <ImageView
+        android:id="@+id/closebtn3"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_4sdp"
+        android:src="@drawable/close" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_toStartOf="@+id/closebtn3"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/font1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:padding="@dimen/_4sdp"
+                android:text="शायरी"
+                android:textSize="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:background="@color/pink2"/>
+
+            <TextView
+                android:id="@+id/font2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:padding="@dimen/_4sdp"
+                android:text="शायरी"
+                android:textSize="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@color/pink2"/>
+
+            <TextView
+                android:id="@+id/font3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:padding="@dimen/_4sdp"
+                android:text="शायरी"
+                android:textSize="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:background="@color/pink2"/>
+
+            <TextView
+                android:id="@+id/font4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:padding="@dimen/_4sdp"
+                android:fontFamily="@font/agra"
+                android:text="शायरी"
+                android:textSize="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:background="@color/pink2"/>
+
+            <TextView
+                android:id="@+id/font5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:padding="@dimen/_4sdp"
+                android:fontFamily="@font/dev"
+                android:text="शायरी"
+                android:textSize="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:background="@color/pink2"/>
+
+            <TextView
+                android:id="@+id/font6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:padding="@dimen/_4sdp"
+                android:fontFamily="@font/himalaya"
+                android:text="शायरी"
+                android:textSize="@dimen/_20sdp"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:background="@color/pink2"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>
