@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/dialog_corner.xml" value="0.143" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/gr_bg.xml" value="0.143" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/grad_bg1.xml" value="0.135" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/grad_bg10.xml" value="0.143" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/grad_bg2.xml" value="0.135" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/grad_bg3.xml" value="0.135" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/grad_bg4.xml" value="0.135" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/grad_bg5.xml" value="0.135" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/grad_bg6.xml" value="0.12" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/grad_bg7.xml" value="0.135" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/grad_bg8.xml" value="0.135" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/grad_bg9.xml" value="0.143" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/green_bg.xml" value="0.143" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/onclick_color.xml" value="0.143" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/drawable/selector_txt.xml" value="0.143" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/activity_edit.xml" value="0.22" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/activity_main.xml" value="0.25769927536231885" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/activity_settings.xml" value="0.25" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/activity_shayris.xml" value="0.25769927536231885" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/activity_show.xml" value="0.25" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/category_list_items.xml" value="0.16" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/choose_colors_dialog.xml" value="0.2758152173913043" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/choosebg_dialog.xml" value="0.2758152173913043" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/colors_dialog.xml" value="0.22" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/emojis_dialog.xml" value="0.2758152173913043" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/fonts_dialog.xml" value="0.2758152173913043" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/grad_item.xml" value="0.2758152173913043" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/grid_item.xml" value="0.2758152173913043" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/shayris_list_items.xml" value="0.16" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/layout/text_size_dialog.xml" value="0.2758152173913043" />
+        <entry key="..\:/HetAndroid/ShayariApp/app/src/main/res/menu/main_menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
