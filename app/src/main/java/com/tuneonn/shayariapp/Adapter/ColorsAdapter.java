@@ -17,9 +17,9 @@ public class ColorsAdapter extends BaseAdapter {
 
     TextView color_txtv, grad_txtv;
 
-    public ColorsAdapter(Context context, boolean i) {
+    public ColorsAdapter(Context context, boolean h) {
         this.context = context;
-        this.h = i;
+        this.h = h;
     }
 
     @Override

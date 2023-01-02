@@ -13,8 +13,9 @@
         android:layout_alignParentTop="true">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             app:cardBackgroundColor="#FA1717"
             app:cardCornerRadius="@dimen/_8sdp"
             app:cardElevation="@dimen/_8sdp"
@@ -79,7 +80,7 @@
             <TextView
                 android:id="@+id/edit_background"
                 android:layout_width="@dimen/_80sdp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginVertical="@dimen/_5sdp"
                 android:background="@color/green"
@@ -93,7 +94,7 @@
             <TextView
                 android:id="@+id/edit_textcolor"
                 android:layout_width="@dimen/_80sdp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginVertical="@dimen/_5sdp"
                 android:background="@drawable/gr_bg"
@@ -106,7 +107,7 @@
 
             <TextView
                 android:layout_width="@dimen/_80sdp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginVertical="@dimen/_5sdp"
                 android:background="#FF0000"
@@ -128,7 +129,7 @@
             <TextView
                 android:id="@+id/edit_font"
                 android:layout_width="@dimen/_80sdp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginVertical="@dimen/_5sdp"
                 android:background="@color/green"
@@ -142,7 +143,7 @@
             <TextView
                 android:id="@+id/edit_emojis"
                 android:layout_width="@dimen/_80sdp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginVertical="@dimen/_5sdp"
                 android:background="@drawable/gr_bg"
@@ -156,7 +157,7 @@
             <TextView
                 android:id="@+id/edit_textsize"
                 android:layout_width="@dimen/_80sdp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginVertical="@dimen/_5sdp"
                 android:background="#FF0000"

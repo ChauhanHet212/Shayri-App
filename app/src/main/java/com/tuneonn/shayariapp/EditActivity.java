@@ -54,21 +54,8 @@ public class EditActivity extends AppCompatActivity {
         edit_ran_col.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                List<Integer> randomlist = new ArrayList<>();
-
-                randomlist.add(R.drawable.grad_bg1);
-                randomlist.add(R.drawable.grad_bg2);
-                randomlist.add(R.drawable.grad_bg3);
-                randomlist.add(R.drawable.grad_bg4);
-                randomlist.add(R.drawable.grad_bg5);
-                randomlist.add(R.drawable.grad_bg6);
-                randomlist.add(R.drawable.grad_bg7);
-                randomlist.add(R.drawable.grad_bg8);
-                randomlist.add(R.drawable.grad_bg9);
-                randomlist.add(R.drawable.grad_bg10);
-
-                int ran = new Random().nextInt(randomlist.size());
-                edit_shayritxtv.setBackground(getDrawable(randomlist.get(ran)));
+                int ran = new Random().nextInt(AllShayris.gradarr.length);
+                edit_shayritxtv.setBackground(getDrawable(AllShayris.gradarr[ran]));
             }
         });
 
@@ -78,8 +65,16 @@ public class EditActivity extends AppCompatActivity {
                 dialog = new BottomSheetDialog(EditActivity.this);
                 dialog.setContentView(R.layout.choosebg_dialog);
 
-                GridView grad_txtv = dialog.findViewById(R.id.grad_txtv);
-                //ColorsAdapter adapter = new ColorsAdapter()
+                GridView grad_gridView = dialog.findViewById(R.id.grad_gridView);
+                ColorsAdapter adapter = new ColorsAdapter(EditActivity.this, false);
+                grad_gridView.setAdapter(adapter);
+
+                grad_gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        edit_shayritxtv.setBackground(getResources().getDrawable(AllShayris.gradarr[i]));
+                    }
+                });
 
                 dialog.show();
 
@@ -136,7 +131,7 @@ public class EditActivity extends AppCompatActivity {
                 gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        edit_shayritxtv.setBackground(getResources().getDrawable(AllShayris.gradarr[i]));
+                        edit_shayritxtv.setTextColor(getResources().getColor(AllShayris.colorsarr[i]));
                     }
                 });
 

@@ -10,11 +10,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.tuneonn.shayariapp.Adapter.ColorsAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -96,21 +99,8 @@ public class ShowActivity extends AppCompatActivity implements View.OnClickListe
         random_bg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                List<Integer> randomlist = new ArrayList<>();
-
-                randomlist.add(R.drawable.grad_bg1);
-                randomlist.add(R.drawable.grad_bg2);
-                randomlist.add(R.drawable.grad_bg3);
-                randomlist.add(R.drawable.grad_bg4);
-                randomlist.add(R.drawable.grad_bg5);
-                randomlist.add(R.drawable.grad_bg6);
-                randomlist.add(R.drawable.grad_bg7);
-                randomlist.add(R.drawable.grad_bg8);
-                randomlist.add(R.drawable.grad_bg9);
-                randomlist.add(R.drawable.grad_bg10);
-
-                int ran = new Random().nextInt(randomlist.size());
-                show_shayri.setBackground(getDrawable(randomlist.get(ran)));
+                int ran = new Random().nextInt(AllShayris.gradarr.length);
+                show_shayri.setBackground(getDrawable(AllShayris.gradarr[ran]));
             }
         });
         show_copy.setOnClickListener(new View.OnClickListener() {
@@ -128,27 +118,16 @@ public class ShowActivity extends AppCompatActivity implements View.OnClickListe
                 dialog = new BottomSheetDialog(ShowActivity.this);
                 dialog.setContentView(R.layout.choosebg_dialog);
 
-//                bg1 = dialog.findViewById(R.id.bg1);
-//                bg2 = dialog.findViewById(R.id.bg2);
-//                bg3 = dialog.findViewById(R.id.bg3);
-//                bg4 = dialog.findViewById(R.id.bg4);
-//                bg5 = dialog.findViewById(R.id.bg5);
-//                bg6 = dialog.findViewById(R.id.bg6);
-//                bg7 = dialog.findViewById(R.id.bg7);
-//                bg8 = dialog.findViewById(R.id.bg8);
-//                bg9 = dialog.findViewById(R.id.bg9);
-//                bg10 = dialog.findViewById(R.id.bg10);
-//
-//                bg1.setOnClickListener(ShowActivity.this);
-//                bg2.setOnClickListener(ShowActivity.this);
-//                bg3.setOnClickListener(ShowActivity.this);
-//                bg4.setOnClickListener(ShowActivity.this);
-//                bg5.setOnClickListener(ShowActivity.this);
-//                bg6.setOnClickListener(ShowActivity.this);
-//                bg7.setOnClickListener(ShowActivity.this);
-//                bg8.setOnClickListener(ShowActivity.this);
-//                bg9.setOnClickListener(ShowActivity.this);
-//                bg10.setOnClickListener(ShowActivity.this);
+                GridView grad_gridView = dialog.findViewById(R.id.grad_gridView);
+                ColorsAdapter adapter = new ColorsAdapter(ShowActivity.this, false);
+                grad_gridView.setAdapter(adapter);
+
+                grad_gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        show_shayri.setBackground(getResources().getDrawable(AllShayris.gradarr[i]));
+                    }
+                });
 
                 dialog.show();
 
