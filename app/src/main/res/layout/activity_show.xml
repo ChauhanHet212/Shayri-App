@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowActivity">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4sdp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/show_choosebgbtn"
+            android:src="@drawable/expand"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"/>
+
+        <TextView
+            android:id="@+id/shayri_count"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:text="1/10"
+            android:layout_gravity="center"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/_16sdp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/random_bgbtn"
+            android:src="@drawable/reload"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:layout_above="@+id/linear2"
+        android:padding="@dimen/_4sdp">
+
+        <TextView
+            android:id="@+id/show_shayritxtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/pink"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"/>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/_6sdp"
+        android:layout_margin="@dimen/_4sdp">
+
+        <ImageView
+            android:id="@+id/show_copy"
+            android:src="@drawable/copy1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:padding="@dimen/_4sdp"
+            android:background="@color/onclick_textview3"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/previous_shayri"
+            android:src="@drawable/ic_action_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@color/onclick_textview3"
+            android:padding="@dimen/_4sdp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/show_editbtn"
+            android:src="@drawable/pencil2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@color/onclick_textview3"
+            android:padding="@dimen/_4sdp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/next_shayri"
+            android:src="@drawable/ic_action_next_item"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@color/onclick_textview3"
+            android:padding="@dimen/_4sdp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/share_shayri"
+            android:src="@drawable/ic_action_share"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@color/onclick_textview3"
+            android:padding="@dimen/_4sdp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

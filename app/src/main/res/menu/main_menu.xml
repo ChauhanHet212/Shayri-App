@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_share"
+        android:title="share"
+        android:icon="@drawable/ic_action_share"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/menu_settings"
+        android:title="Settings"
+        app:showAsAction="never"/>
+
+    <item android:title="Rate US"
+        app:showAsAction="never"/>
+
+    <item android:title="More Apps 1"
+        app:showAsAction="never"/>
+
+    <item android:title="More Apps 2"
+        app:showAsAction="never"/>
+
+    <item android:title="Free Apps 1"
+        app:showAsAction="never"/>
+
+    <item android:title="Free Apps 2"
+        app:showAsAction="never"/>
+
+</menu>

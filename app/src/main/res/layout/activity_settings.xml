@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emoji Settings"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:padding="@dimen/_8sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/settings_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Emoji"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="center"
+            android:padding="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:background="@color/pink2"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/settings_noemoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green2"
+            android:text="No Emoji"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="center"
+            android:padding="@dimen/_6sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:background="@color/Gray"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate Us"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_4sdp"/>
+
+    <View
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:background="@color/Gray"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_4sdp"/>
+
+    <View
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_width="match_parent"
+        android:background="@color/Gray"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="More Apps"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_4sdp"/>
+
+</LinearLayout>
