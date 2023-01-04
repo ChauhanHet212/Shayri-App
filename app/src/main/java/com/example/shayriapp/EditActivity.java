@@ -23,7 +23,7 @@ import java.util.Random;
 
 public class EditActivity extends AppCompatActivity {
 
-    TextView edit_textv,bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10, backgroundcolorbtn, textcolorbtn, textsizebtn, fontbtn, edit_emojis;
+    TextView edit_textv, backgroundcolorbtn, textcolorbtn, textsizebtn, fontbtn, edit_emojis;
     ImageView edit_randombgbtn, edit_choosebgbtn;
     BottomSheetDialog dialog, dialogbg_color, dialogtxt_color, dialog_textsize, dialog_fonts, dialog_emojis;
     TextView[] col = new TextView[40];
