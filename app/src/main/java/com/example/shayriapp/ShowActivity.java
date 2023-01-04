@@ -26,7 +26,7 @@ import java.util.Random;
 
 public class ShowActivity extends AppCompatActivity {
 
-    TextView shayri_count, show_shayritxtv, bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10;
+    TextView shayri_count, show_shayritxtv;
     ImageView previous_shayri, next_shayri, share_shayri, random_bgbtn, show_copy, show_choosebgbtn, show_editbtn;
     BottomSheetDialog dialog;
 
