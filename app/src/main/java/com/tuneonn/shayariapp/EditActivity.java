@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 import android.graphics.Typeface;
-import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -17,16 +16,12 @@ import android.widget.TextView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.tuneonn.shayariapp.Adapter.ColorsAdapter;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class EditActivity extends AppCompatActivity {
 
     ImageView edit_ran_col, edit_sel_col;
-    TextView edit_shayritxtv, bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10, edit_background, edit_textcolor, edit_textsize, edit_emojis, edit_font;
+    TextView edit_shayritxtv, edit_background, edit_textcolor, edit_textsize, edit_emojis, edit_font;
     BottomSheetDialog dialog, bgcolor_dialog, txtcolor_dialog, textsize_dialog, emojis_dialog, font_dialog;
     int current_size = 26, po1, po2;
 
@@ -73,6 +68,7 @@ public class EditActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                         edit_shayritxtv.setBackground(getResources().getDrawable(AllShayris.gradarr[i]));
+                        dialog.dismiss();
                     }
                 });
 

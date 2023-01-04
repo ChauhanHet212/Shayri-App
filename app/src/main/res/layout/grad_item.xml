@@ -6,7 +6,7 @@
 
     <TextView
         android:id="@+id/grad_txtv"
-        android:layout_width="@dimen/_145sdp"
+        android:layout_width="@dimen/_140sdp"
         android:layout_height="@dimen/_100sdp"
         android:layout_marginHorizontal="@dimen/_6sdp"
         android:layout_marginVertical="@dimen/_4sdp"

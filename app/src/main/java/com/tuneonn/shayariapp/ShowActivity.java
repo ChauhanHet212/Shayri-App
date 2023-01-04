@@ -23,9 +23,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class ShowActivity extends AppCompatActivity implements View.OnClickListener {
+public class ShowActivity extends AppCompatActivity {
 
-    TextView shayri_count, show_shayri, bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10;
+    TextView shayri_count, show_shayri;
     ImageView show_previous, show_next, show_share, random_bg, show_copy, show_choosebg, edit_modebtn;
     BottomSheetDialog dialog;
 
@@ -126,6 +126,7 @@ public class ShowActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                         show_shayri.setBackground(getResources().getDrawable(AllShayris.gradarr[i]));
+                        dialog.dismiss();
                     }
                 });
 
@@ -161,40 +162,5 @@ public class ShowActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         return false;
-    }
-
-    @Override
-    public void onClick(View view) {
-        if (view.getId() == bg1.getId()){
-            show_shayri.setBackground(getDrawable(R.drawable.grad_bg1));
-            dialog.dismiss();
-        } else if (view.getId() == bg2.getId()){
-            show_shayri.setBackground(getDrawable(R.drawable.grad_bg2));
-            dialog.dismiss();
-        } else if (view.getId() == bg3.getId()){
-            show_shayri.setBackground(getDrawable(R.drawable.grad_bg3));
-            dialog.dismiss();
-        } else if (view.getId() == bg4.getId()){
-            show_shayri.setBackground(getDrawable(R.drawable.grad_bg4));
-            dialog.dismiss();
-        } else if (view.getId() == bg5.getId()){
-            show_shayri.setBackground(getDrawable(R.drawable.grad_bg5));
-            dialog.dismiss();
-        } else if (view.getId() == bg6.getId()){
-            show_shayri.setBackground(getDrawable(R.drawable.grad_bg6));
-            dialog.dismiss();
-        } else if (view.getId() == bg7.getId()){
-            show_shayri.setBackground(getDrawable(R.drawable.grad_bg7));
-            dialog.dismiss();
-        } else if (view.getId() == bg8.getId()){
-            show_shayri.setBackground(getDrawable(R.drawable.grad_bg8));
-            dialog.dismiss();
-        } else if (view.getId() == bg9.getId()){
-            show_shayri.setBackground(getDrawable(R.drawable.grad_bg9));
-            dialog.dismiss();
-        } else {
-            show_shayri.setBackground(getDrawable(R.drawable.grad_bg10));
-            dialog.dismiss();
-        }
     }
 }
