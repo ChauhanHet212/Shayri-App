@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/TextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:text="शायरी"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:background="@color/pink2"/>
+
+</LinearLayout>

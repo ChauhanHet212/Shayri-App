@@ -1,5 +1,9 @@
 package com.example.shayriapp;
 
+import android.os.Environment;
+
+import java.io.File;
+
 public class AllShayris {
     public static final String[] ST_EMOJIS = {"\uD83C\uDF37\uD83C\uDF40\uD83C\uDF3A\uD83E\uDD40\uD83C\uDF3B\uD83C\uDF34\uD83C\uDF39\uD83C\uDF39\n",
                                                 "\uD83D\uDE0A\uD83D\uDE0D\uD83D\uDE18❤️️\uD83D\uDC6B\uD83D\uDE0A\uD83D\uDE0E\n",
@@ -403,4 +407,7 @@ public class AllShayris {
             R.color.color36, R.color.color37, R.color.color38, R.color.color39, R.color.color40};
     public static final int[] GRADIENT = {R.drawable.grad_bg1, R.drawable.grad_bg2, R.drawable.grad_bg3, R.drawable.grad_bg4, R.drawable.grad_bg5,
             R.drawable.grad_bg6, R.drawable.grad_bg7, R.drawable.grad_bg8, R.drawable.grad_bg9, R.drawable.grad_bg10};
+    public static final String[] FONTS = {"ALGER.TTF", "BRUSHSCI.TTF", "CHILLER.TTF", "GIGI.TTF", "ITCBLKAD.TTF"};
+
+    public static final File FILE = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
 }
