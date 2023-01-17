@@ -8,22 +8,32 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/linear"
-        android:layout_marginHorizontal="@dimen/_4sdp"
-        android:layout_marginVertical="@dimen/_8sdp">
+        android:layout_above="@id/linear"
+        android:layout_alignParentTop="true">
 
-        <TextView
-            android:id="@+id/edit_textv"
+        <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/_20sdp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:padding="@dimen/_8sdp"
-            android:background="#DA2424"/>
+            app:cardBackgroundColor="#FA1717"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_8sdp"
+            app:cardMaxElevation="@dimen/_8sdp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/edit_shayritxtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#FA1717"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
 
     </ScrollView>
 

@@ -42,19 +42,31 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linear"
-        android:layout_above="@+id/linear2"
-        android:padding="@dimen/_4sdp">
+        android:layout_above="@id/linear2"
+        android:layout_below="@+id/linear1">
 
-        <TextView
-            android:id="@+id/show_shayritxtv"
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/pink"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_20sdp"
-            android:gravity="center"
-            android:padding="@dimen/_8sdp"/>
+            android:layout_gravity="center_horizontal"
+            app:cardBackgroundColor="@color/pink"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardElevation="@dimen/_8sdp"
+            app:cardMaxElevation="@dimen/_8sdp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/show_shayri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/pink"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_22sdp" />
+
+        </androidx.cardview.widget.CardView>
 
     </ScrollView>
 
