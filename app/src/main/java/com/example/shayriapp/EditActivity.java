@@ -4,7 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -15,28 +21,35 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.example.shayriapp.Adapters.ColorsAdapter;
+import com.example.shayriapp.Adapters.FontsAdapter;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 public class EditActivity extends AppCompatActivity {
 
-    TextView edit_textv,bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8, bg9, bg10, backgroundcolorbtn, textcolorbtn, textsizebtn, fontbtn, edit_emojis;
+    TextView edit_textv,backgroundcolorbtn, textcolorbtn, textsizebtn, fontbtn, edit_emojis, edit_share;
     ImageView edit_randombgbtn, edit_choosebgbtn;
     BottomSheetDialog dialog, dialogbg_color, dialogtxt_color, dialog_textsize, dialog_fonts, dialog_emojis;
-    TextView[] col = new TextView[40];
-    TextView[] txtcol = new TextView[40];
     int current_size = 26;
     String shayri;
+    File f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
 
-        edit_textv = findViewById(R.id.edit_textv);
+        edit_textv = findViewById(R.id.edit_shayritxtv);
         edit_randombgbtn = findViewById(R.id.edit_randombgbtn);
         edit_choosebgbtn = findViewById(R.id.edit_choosebgbtn);
         backgroundcolorbtn = findViewById(R.id.backgroundcolorbtn);
@@ -44,6 +57,7 @@ public class EditActivity extends AppCompatActivity {
         textsizebtn = findViewById(R.id.textsizebtn);
         fontbtn = findViewById(R.id.fontbtn);
         edit_emojis = findViewById(R.id.edit_emojis);
+        edit_share = findViewById(R.id.edit_share);
 
         shayri = getIntent().getStringExtra("shayri");
         String emoji1 = getIntent().getStringExtra("emoji1");
@@ -193,70 +207,14 @@ public class EditActivity extends AppCompatActivity {
                     }
                 });
 
-                ((TextView)dialog_fonts.findViewById(R.id.font1)).setOnClickListener(new View.OnClickListener() {
+                GridView fonts_gridView = dialog_fonts.findViewById(R.id.fonts_gridView);
+                fonts_gridView.setNumColumns(1);
+                FontsAdapter fontsAdapter = new FontsAdapter(EditActivity.this, AllShayris.FONTS);
+                fonts_gridView.setAdapter(fontsAdapter);
+                fonts_gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
-                    public void onClick(View view) {
-                        edit_textv.setTypeface(Typeface.DEFAULT);
-                    }
-                });
-
-                ((TextView)dialog_fonts.findViewById(R.id.font2)).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        edit_textv.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
-                    }
-                });
-
-                ((TextView)dialog_fonts.findViewById(R.id.font3)).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        edit_textv.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
-                    }
-                });
-
-                ((TextView)dialog_fonts.findViewById(R.id.font4)).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Typeface typeface = ResourcesCompat.getFont(EditActivity.this, R.font.advent_pro_medium);
-                        edit_textv.setTypeface(typeface);
-                    }
-                });
-
-                ((TextView)dialog_fonts.findViewById(R.id.font5)).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Typeface typeface = ResourcesCompat.getFont(EditActivity.this, R.font.acme);
-                        edit_textv.setTypeface(typeface);
-                    }
-                });
-
-                ((TextView)dialog_fonts.findViewById(R.id.font6)).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        edit_textv.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD_ITALIC));
-                    }
-                });
-
-                ((TextView)dialog_fonts.findViewById(R.id.font7)).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Typeface typeface = ResourcesCompat.getFont(EditActivity.this, R.font.agra);
-                        edit_textv.setTypeface(typeface);
-                    }
-                });
-
-                ((TextView)dialog_fonts.findViewById(R.id.font8)).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Typeface typeface = ResourcesCompat.getFont(EditActivity.this, R.font.dev);
-                        edit_textv.setTypeface(typeface);
-                    }
-                });
-
-                ((TextView)dialog_fonts.findViewById(R.id.font9)).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Typeface typeface = ResourcesCompat.getFont(EditActivity.this, R.font.himalaya);
+                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        Typeface typeface = Typeface.createFromAsset(getAssets(), AllShayris.FONTS[i]);
                         edit_textv.setTypeface(typeface);
                     }
                 });
@@ -303,5 +261,41 @@ public class EditActivity extends AppCompatActivity {
                 dialog_emojis.show();
             }
         });
+        edit_share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bitmap img = getBitmapFromView(edit_textv);
+                Intent ishare = new Intent(Intent.ACTION_SEND);
+                ishare.setType("image/jpeg");
+                ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+                img.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
+                String currentTime = sdf.format(new Date());
+                f = new File(AllShayris.FILE.getAbsolutePath() + "/IMG_" + currentTime + ".jpg");
+                try {
+                    f.createNewFile();
+                    FileOutputStream fo = new FileOutputStream(f);
+                    fo.write(bytes.toByteArray());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                ishare.putExtra(Intent.EXTRA_STREAM, Uri.parse(f.getAbsolutePath()));
+                startActivity(Intent.createChooser(ishare, "share Via"));
+            }
+        });
+    }
+
+    private Bitmap getBitmapFromView(TextView view) {
+        Bitmap rBitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(rBitmap);
+        Drawable drawablebg = view.getBackground();
+        if (drawablebg != null){
+            drawablebg.draw(canvas);
+        } else {
+            canvas.drawColor(Color.WHITE);
+        }
+        view.draw(canvas);
+
+        return rBitmap;
     }
 }
